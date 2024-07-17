@@ -1,0 +1,3 @@
+[submodule "submodule-for-timecapsule"]
+	path = submodule-for-timecapsule
+	url = git@github.com:saidburkhanmukhtorov/submodule-for-timecapsule.git
