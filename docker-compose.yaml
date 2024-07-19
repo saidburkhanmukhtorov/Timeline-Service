@@ -5,7 +5,7 @@ services:
     container_name: timeline
     build: ./
     ports:
-      - "9090:9090"
+      - "9091:9091"
     environment:
       KAFKA_BROKERS: "kafka:9092"
       POSTGRES_HOST: "postgres_dock"

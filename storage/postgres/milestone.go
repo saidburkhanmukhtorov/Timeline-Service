@@ -124,14 +124,14 @@ func (r *MilestoneRepo) GetAllMilestones(ctx context.Context, req *timeline.GetA
 	}
 
 	if req.Title != "" {
-		filter += fmt.Sprintf(" AND title LIKE $%d", count)
+		filter += fmt.Sprintf(" AND title ILIKE $%d", count)
 		args = append(args, "%"+req.Title+"%")
 		count++
 	}
 
 	if req.Category != "" {
-		filter += fmt.Sprintf(" AND category = $%d", count)
-		args = append(args, req.Category)
+		filter += fmt.Sprintf(" AND category ILIKE $%d", count)
+		args = append(args, "%"+req.Category+"%")
 		count++
 	}
 

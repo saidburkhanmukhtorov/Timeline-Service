@@ -72,6 +72,7 @@ func Load() Config {
 	config.MongoPassword = cast.ToString(coalesce("MONGO_PASSWORD", "example"))
 	config.MongoDB = cast.ToString(coalesce("MONGO_DB", "your_mongodb_name"))
 
+	// Kafka
 	config.KafkaBrokers = cast.ToStringSlice(coalesce("KAFKA_BROKERS", []string{"kafka:9092"}))
 	config.KafkaBrokersTest = cast.ToStringSlice(coalesce("KAFKA_BROKERS_Test", []string{"localhost:9092"}))
 
